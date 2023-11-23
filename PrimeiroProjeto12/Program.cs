@@ -6,7 +6,8 @@ namespace PrimeiroProjeto12 {
     internal class Program {
         static void Main(string[] args) {
             Tabuleiros tabuleiro = new Tabuleiros(8,8);
-            
+
+            Tela.imprimirTabuleiro(tabuleiro);
         }
     }
 }
