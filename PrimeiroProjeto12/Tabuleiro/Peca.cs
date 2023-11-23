@@ -7,11 +7,12 @@ namespace Tabuleiro {
         public int QuantidadeDeMovimentos { get; protected set; }
         public Tabuleiros Tabuleiro { get; protected set; }
 
-        public Peca(Posicao posicao, Cor cor, Tabuleiros tabuleiro) {
-            this.Posicao = posicao;
+        public Peca(Cor cor, Tabuleiros tabuleiro) {
+            this.Posicao = null;
             this.Cor = cor;
             this.Tabuleiro = tabuleiro;
             this.QuantidadeDeMovimentos = 0;
         }
+
     }
 }
