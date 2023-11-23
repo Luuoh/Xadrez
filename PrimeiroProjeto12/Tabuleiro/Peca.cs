@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace Tabuleiro {
-    internal class Peca {
+    abstract class Peca {
         public Posicao Posicao { get; set; }
         public Cor Cor { get; protected set; }
         public int QuantidadeDeMovimentos { get; protected set; }
@@ -17,5 +17,8 @@ namespace Tabuleiro {
         public void incrementarQuantidadeDeMovimentos() {
             QuantidadeDeMovimentos++;
         }
+
+        public abstract bool[,] movimentosPossiveis();
+
     }
 }
