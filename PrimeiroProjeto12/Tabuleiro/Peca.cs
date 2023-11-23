@@ -14,5 +14,8 @@ namespace Tabuleiro {
             this.QuantidadeDeMovimentos = 0;
         }
 
+        public void incrementarQuantidadeDeMovimentos() {
+            QuantidadeDeMovimentos++;
+        }
     }
 }

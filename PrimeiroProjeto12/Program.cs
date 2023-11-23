@@ -7,17 +7,20 @@ namespace PrimeiroProjeto12 {
         static void Main(string[] args) {
 
             try {
-                Tabuleiros tabuleiro = new Tabuleiros(8, 8);
+                PartidaDeXadrez partida = new PartidaDeXadrez();
+                while (!partida.terminada) {
+                    Console.Clear();
+                    Tela.imprimirTabuleiro(partida.tabuleiro);
 
-                tabuleiro.colocarPeca(new Torre(tabuleiro, Cor.Preta), new Posicao(0, 0));
-                tabuleiro.colocarPeca(new Torre(tabuleiro, Cor.Preta), new Posicao(1, 3));
-                tabuleiro.colocarPeca(new Rei(tabuleiro, Cor.Preta), new Posicao(2, 4));
+                    Console.WriteLine();
+                    Console.Write("Origem: ");
+                    Posicao origem = Tela.lerPosicaoXadrez().toPosicao();
+                    Console.Write("Destino: ");
+                    Posicao destino = Tela.lerPosicaoXadrez().toPosicao();
 
-                tabuleiro.colocarPeca(new Torre(tabuleiro, Cor.Branca), new Posicao(7, 7));
-                tabuleiro.colocarPeca(new Torre(tabuleiro, Cor.Branca), new Posicao(6, 3));
-                tabuleiro.colocarPeca(new Rei(tabuleiro, Cor.Branca), new Posicao(4, 5));
+                    partida.executarMovimento(origem, destino);
+                }
 
-                Tela.imprimirTabuleiro(tabuleiro);
             }
             catch (Exception e) { 
                 Console.WriteLine(e.Message);
