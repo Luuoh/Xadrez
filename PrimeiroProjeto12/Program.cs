@@ -12,10 +12,8 @@ namespace PrimeiroProjeto12 {
 
                     try {
                         Console.Clear();
-                        Tela.imprimirTabuleiro(partida.tabuleiro);
-                        Console.WriteLine();
-                        Console.WriteLine("Turno: " + partida.turno);
-                        Console.WriteLine("Aguardado jogador: " + partida.jogadorAtual);
+                        Tela.imprimirPartida(partida);
+                        
 
                         Console.WriteLine();
                         Console.Write("Origem: ");
