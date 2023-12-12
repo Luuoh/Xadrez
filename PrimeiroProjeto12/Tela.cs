@@ -9,10 +9,13 @@ namespace PrimeiroProjeto12 {
             imprimirTabuleiro(partida.tabuleiro);
             Console.WriteLine();
             imprimirPecasCapturadas(partida);
-
             Console.WriteLine();
             Console.WriteLine("Turno: " + partida.turno);
             Console.WriteLine("Aguardado jogador: " + partida.jogadorAtual);
+
+            if (partida.xeque) {
+                Console.WriteLine("XEQUE!");
+            }
         }
 
         public static void imprimirPecasCapturadas(PartidaDeXadrez partida) {
