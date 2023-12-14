@@ -68,7 +68,7 @@ namespace Xadrez {
                 mat[pos.Linha, pos.Coluna] = true;
             }
 
-            // #jogadaespecial (ROQUE)
+            // #jogadaEspecial (ROQUE)
             if (QuantidadeDeMovimentos == 0 && !partida.xeque) {
 
                 // Roque pequeno
