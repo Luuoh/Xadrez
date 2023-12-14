@@ -20,6 +20,7 @@ namespace PrimeiroProjeto12 {
             }
             else {
                 Console.WriteLine("XEQUEMATE!");
+                Console.WriteLine();
                 Console.WriteLine("Vencedor: " + partida.jogadorAtual);
             }
         }
